@@ -2,6 +2,7 @@ package com.linebot.beta.service;
 
 import java.util.Date;
 import java.util.Iterator;
+import java.util.TimeZone;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -14,11 +15,10 @@ public class MessageManager {
 	public MessageManager(){
 //		DEMO
 		result.put("Join", "Welcome");
-		result.put("Time", DatesUtil.DateTimeFormat.format(new Date()));
+		DatesUtil.DateTimeFormat.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
+		String timeResponse = "目前時區設定為 GMT+8:00\n目前時間為[%s]";
+		result.put("Time", String.format(timeResponse, DatesUtil.DateTimeFormat.format(new Date())));
 		result.put("author", GLOBAL_STRING.replyAuthor);
-		result.put("在幹嘛", "想妳ㄚㄚㄚㄚㄚㄚㄚㄚ");
-		result.put("在幹嘛?", "想妳ㄚㄚㄚㄚㄚㄚㄚㄚ");
-		result.put("在幹嘛？", "想妳ㄚㄚㄚㄚㄚㄚㄚㄚ");
 //		
 	}
 	private Boolean IsEffectiveText(String str) {

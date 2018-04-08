@@ -8,6 +8,6 @@ public class GLOBAL_STRING {
 	
 	public static final String replyUnknown = "I have no idea about this message :D";
 	public static final String replyAuthor = "可愛的子育, 雙魚座 \uD83D\uDEB6\n"+
-			"休學當兵中\n"+
+			"休學考多益等畢業中\n"+
 			"謝謝大家\uD83C\uDFAD\n";
 }
